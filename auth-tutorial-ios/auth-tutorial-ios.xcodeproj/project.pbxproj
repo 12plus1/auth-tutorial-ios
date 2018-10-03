@@ -13,6 +13,7 @@
 		BE75E47F21651B8A0040A517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE75E47D21651B8A0040A517 /* Main.storyboard */; };
 		BE75E48121651B8C0040A517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE75E48021651B8C0040A517 /* Assets.xcassets */; };
 		BE75E48421651B8C0040A517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE75E48221651B8C0040A517 /* LaunchScreen.storyboard */; };
+		BE75E48C216522970040A517 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75E48B216522970040A517 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BE75E48021651B8C0040A517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE75E48321651B8C0040A517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE75E48521651B8C0040A517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE75E48B216522970040A517 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CF9E8E767D8BA039EBE41066 /* Pods_auth_tutorial_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_auth_tutorial_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				BE75E48021651B8C0040A517 /* Assets.xcassets */,
 				BE75E48221651B8C0040A517 /* LaunchScreen.storyboard */,
 				BE75E48521651B8C0040A517 /* Info.plist */,
+				BE75E48B216522970040A517 /* AuthService.swift */,
 			);
 			path = "auth-tutorial-ios";
 			sourceTree = "<group>";
@@ -162,15 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-auth-tutorial-ios/Pods-auth-tutorial-ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
 			);
@@ -184,15 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-auth-tutorial-ios-checkManifestLockResult.txt",
 			);
@@ -208,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE75E48C216522970040A517 /* AuthService.swift in Sources */,
 				BE75E47C21651B8A0040A517 /* ViewController.swift in Sources */,
 				BE75E47A21651B8A0040A517 /* AppDelegate.swift in Sources */,
 			);
