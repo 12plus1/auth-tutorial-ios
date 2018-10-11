@@ -7,7 +7,6 @@ class AuthService {
     struct FailedToAuthenticate: AuthServiceError, UnderlyingError { let underlying: Error? }
     
     var currentAuthFlow: OIDExternalUserAgentSession?
-    private var authState: OIDAuthState?
     
     private let authEndpoint = URL(string: "http://localhost:4444/oauth2/auth")!
     private let tokenEndpoint = URL(string: "http://localhost:4444/oauth2/token")!
@@ -16,7 +15,7 @@ class AuthService {
     private let clientSecret = "test-secret"
     private lazy var config = OIDServiceConfiguration(authorizationEndpoint: authEndpoint, tokenEndpoint: tokenEndpoint)
     
-    func authenticateUser(from vc: UIViewController, onSuccess: @escaping (OIDAuthState) -> Void, onError: @escaping (Error) -> Void) {
+    func authorize(from vc: UIViewController, onSuccess: @escaping (OIDAuthState) -> Void, onError: @escaping (Error) -> Void) {
         let request = OIDAuthorizationRequest(configuration: config,
                                               clientId: clientId,
                                               clientSecret: clientSecret,
@@ -26,6 +25,7 @@ class AuthService {
                                               additionalParameters: nil)
         currentAuthFlow = OIDAuthState.authState(byPresenting: request, presenting: vc, callback: { (authState, error) in
             if let authState = authState {
+                print(authState)
                 onSuccess(authState)
             } else {
                 onError(FailedToAuthenticate(underlying: error))
